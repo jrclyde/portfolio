@@ -48,18 +48,20 @@
   <div class="main-contact">
     <div class="main-contact-content container">
       <div class="main-contact-container row">
-        <div class="col-md-6">
-          <input value="Name &amp; Surname" name="name" onblur="if (this.value == '') {this.value = 'Name &amp; Surname';}" onfocus="if (this.value == 'Name &amp; Surname') {this.value = '';}">
-        </div>
-        <div class="col-md-6">
-          <input value="E-mail Address" name="email" onblur="if (this.value == '') {this.value = 'E-mail Address';}" onfocus="if (this.value == 'E-mail Address') {this.value = '';}">
-        </div>
-        <div class="col-md-12">
-          <textarea onblur="if (this.value == '') {this.value = 'Message';}" onfocus="if (this.value == 'Message') {this.value = '';}">Message</textarea>
-        </div>
-        <div class="col-md-6">
-          <button>SEND</button>
-        </div>
+        <form role="form" method="post" action="https://formspree.io/jrcly.de@yahoo.com" class="main-contact">
+          <div class="col-md-6">
+            <input value="Name &amp; Surname" name="name" onblur="if (this.value == '') {this.value = 'Name &amp; Surname';}" onfocus="if (this.value == 'Name &amp; Surname') {this.value = '';}">
+          </div>
+          <div class="col-md-6">
+            <input value="E-mail Address" name="email" onblur="if (this.value == '') {this.value = 'E-mail Address';}" onfocus="if (this.value == 'E-mail Address') {this.value = '';}">
+          </div>
+          <div class="col-md-12">
+            <textarea value="Message" name="message" onblur="if (this.value == '') {this.value = 'Message';}" onfocus="if (this.value == 'Message') {this.value = '';}">Message</textarea>
+          </div>
+          <div class="col-md-6">
+            <button>SEND</button>
+          </div>
+        </form>
       </div>
     </div>
   </div>

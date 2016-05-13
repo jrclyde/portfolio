@@ -8333,8 +8333,11 @@ header:after {
 /*** 7.0 - CONTACT ** */
 .main-contact {
   background-color: #282c37;
-  font-family: "Montserrat", sans-serif;
-  padding-bottom: 30px; }
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  padding-bottom: 30px;
+  line-height: 1.8em;
+  letter-spacing: 0.3px; }
 
 .main-contact-container div {
   padding-top: 30px; }
@@ -8342,24 +8345,28 @@ header:after {
 .main-contact input {
   width: 100%;
   padding: 15px 15px 15px 15px;
+  background-color: #282c37;
   border: solid 1px #EBEBEB;
-  color: #C0C0C0;
+  color: #d3eeff;
   outline: none; }
 
 .main-contact textarea {
   width: 100%;
   height: 300px;
   padding: 15px 15px 15px 15px;
+  background-color: #282c37;
   border: solid 1px #EBEBEB;
-  color: #C0C0C0;
+  color: #d3eeff;
   outline: none; }
 
 .main-contact button {
+  font-family: "Montserrat", sans-serif;
   text-align: center;
   border: solid 1px #d3eeff;
   background-color: transparent;
   padding: 10px 20px 10px 20px;
-  font-size: 12px;
+  font-size: 16px;
+  font-weight: 400;
   color: #d3eeff;
   outline: none; }
 
