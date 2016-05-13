@@ -1,0 +1,27 @@
+doctype html
+//if lt IE 7
+//if IE 7
+//if IE 8
+// [if gt IE 8] <!
+// <![endif]
+include includes/_head
+// LOAD ANIMATE
+//#main-load.main-load
+  img(src='assets/img/loading/load.gif', alt='')
+// MAIN CONTAINER START
+.main-container
+  // HEADER START
+  include includes/_header
+  // HEADER END
+  // MAIN CONTENT START
+  include includes/_main-content-container
+  // MAIN CONTENT END
+  // BLOG CONTENT START
+  include includes/_main-blog
+      // ALL BLOGS BUTTTON START
+      //.main-blog-button
+        button#all-blog-button.main-animate ALL BLOG CONTENTS
+      // ALL BLOGS BUTTTON END
+  // BLOG CONTENT END
+  // FOOTER START
+  include includes/_footer

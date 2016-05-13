@@ -1,0 +1,40 @@
+doctype html
+//if lt IE 7
+  html.no-js.lt-ie9.lt-ie8.lt-ie7  
+//if IE 7
+  html.no-js.lt-ie9.lt-ie8  
+//if IE 8
+  html.no-js.lt-ie9  
+// [if gt IE 8] <!
+html.no-js
+  // <![endif]
+  include includes/_head
+  body
+    // LOAD ANIMATE
+    //#main-load.main-load
+      img(src='assets/img/loading/load.gif', alt='animated loading gif')
+    // MAIN CONTAINER START
+    .main-container
+      // HEADER START
+      include includes/_header
+      // HEADER END
+      // MAIN CONTENT START
+      .main-content.container
+        p Hi
+        h2 I'm Clyde
+        br
+        span Crafting Coffee by Day...Coding by Night
+        hr
+
+      // MAIN CONTENT END
+      // MAIN WORKS START
+      include includes/_main-works.jade
+            // WORK 4 END
+
+          // ALL WORKS BUTTTON START
+          //.main-works-button
+            button#all-works-button.main-animate ALL WORKS
+          // ALL WORKS BUTTTON END
+      // MAIN WORKS END
+      // FOOTER START
+      include includes/_footer
