@@ -76,7 +76,7 @@
 		"decimalPrecision": 10,
 		"fileType": 2,
 		"ignore": 1,
-		"ignoreWasSetByUser": 1,
+		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/css\/_styles.sass",
 		"outputAbbreviatedPath": "\/assets\/css\/_styles.css",
 		"outputPathIsOutsideProject": 0,
