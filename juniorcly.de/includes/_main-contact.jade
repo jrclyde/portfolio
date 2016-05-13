@@ -1,0 +1,11 @@
+.main-contact
+  .main-contact-content.container
+    .main-contact-container.row
+      .col-md-6
+        input(value='Name & Surname', name='name', onblur="if (this.value == '') {this.value = 'Name & Surname';}", onfocus="if (this.value == 'Name & Surname') {this.value = '';}")
+      .col-md-6
+        input(value='E-mail Address', name='email', onblur="if (this.value == '') {this.value = 'E-mail Address';}", onfocus="if (this.value == 'E-mail Address') {this.value = '';}")
+      .col-md-12
+        textarea(onblur="if (this.value == '') {this.value = 'Message';}", onfocus="if (this.value == 'Message') {this.value = '';}") Message
+      .col-md-6
+        button SEND

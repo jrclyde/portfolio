@@ -1,0 +1,886 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:500,400,300|Montserrat:400,700)
+
+/***
+ *
+ *	PORTE - Minimal Portfolio Theme
+ *	Author : H2O Theme
+ *	Copyright © 2015
+ *
+ ***
+
+/***
+ *
+ *	CSS INFO :
+ *
+ *	1.0 - GENERAL
+ *	2.0 - HEADER
+ *	3.0 - CONTENT
+ *	4.0 - WORKS
+ *	5.0 - BLOG
+ *	6.0 - ABOUT
+ *	7.0 - CONTACT
+ *	8.0 - FOOTER
+ *	9.0 - LOAD
+ *	10.0 - RESPONSIVE
+ *
+ ***
+
+/*Vars
+
+$Zircon: #282c37
+$Rockblue: darken(#d6efff, 0.5)
+$Curiousblue: #282c37
+$pink: #c75b9b
+$lily: #c89bae
+$green: #9bc5c8
+$malibu: #7ecaf6
+$seethrupink: rgba(199, 91, 155, 0.9)
+$seethrublue: #282c37
+$highlighter: #fff6a3
+$lapis: #2c6491
+
+/*** 1.0 - GENERAL CSS **
+
+html,
+body
+  font-family: 'Roboto', sans-serif
+  margin: 0
+  padding: 0
+  overflow: scroll
+  
+
+body
+  background-color: $Zircon
+  transition: all 0.5s ease
+  color: $Rockblue
+  font-size: 13pt
+  @media screen and (min-width: 1200px)
+    font-size: 15pt 
+
+b, strong
+  color: $highlighter
+  padding: 0 5px 0 1px
+
+blockquote, q
+  quotes: none
+
+.main-container
+  position: relative
+  width: 100%
+  height: 100%
+  top: 0
+  margin-top: 0px
+
+.container-fluid
+  padding: 0
+  margin: 0
+
+.col-md-4
+  padding-bottom: 15px
+  padding-top: 15px
+
+.main-animate
+  transition: all 0.4s ease
+  -webkit-transition: all 0.4s ease
+  -moz-transition: all 0.4s ease
+  -o-transition: all 0.4s ease
+
+/************************************************
+
+/*** 2.0 - HEADER **
+
+header
+  position: relative
+  height: 80px
+  display: table-cell
+  vertical-align: middle
+  z-index: 900
+
+header:after
+  display: block
+  clear: both
+
+.header
+  position: fixed
+  width: 100%
+  z-index: 900
+  display: table
+
+.header-sticky
+  background-color: $seethrublue
+  margin: auto
+  //box-shadow: 2px 4px 5px 1px rgba(0, 0, 0, 0.04)
+
+.header-logo
+  position: relative
+  float: left
+  display: table-cell
+  vertical-align: middle
+  z-index: 900
+
+.header-menu
+  position: relative
+  float: right
+  display: table-cell
+  vertical-align: middle
+  font-size: 14px
+  z-index: 999
+  cursor: pointer
+
+.header-menu .menu-item
+  position: absolute
+  right: 0
+
+.header-menu .exit-item
+  position: absolute
+  right: 0
+  display: none
+
+.header-menu-open
+  position: fixed
+  background-color: $Zircon
+  width: 100%
+  height: 100%
+  left: 0
+  top: 0
+  z-index: 888
+  display: none
+
+.header-menu-open ul
+  list-style: none
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  padding: 0
+  margin: 0
+
+.header-menu-open ul li
+  text-align: center
+  opacity: 0
+  font-size: 40px
+  padding: 10px 0px 10px 0px
+  color: $Rockblue
+  font-family: 'Montserrat', sans-serif
+  font-weight: 700
+  letter-spacing: 1px
+
+.header-menu-open ul li a
+  text-decoration: none
+  color: $Rockblue
+
+.header-menu-open ul li a:hover
+  font-size: 50px
+  color: #c75b9b
+  cursor: pointer
+
+/************************************************
+
+/*** 3.0 - CONTENT **
+
+.main-content
+  padding-top: 150px
+  font-family: 'Montserrat', sans-serif
+  word-wrap: break-word
+
+.main-content p
+  font-size: 16px
+  font-weight: 500
+  padding: 0
+  margin: 0
+
+.main-content h2
+  font-size: 35px
+  font-weight: normal
+  padding: 0
+  margin: 0
+
+.main-content span
+  font-size: 1em
+  font-weight: 500
+  color: $pink
+  font-family: 'Roboto', sans-serif
+
+.main-content hr
+  width: 40px
+  height: 3px
+  border: 0
+  background-color: $Rockblue
+  margin: 40px 0px 40px 0px
+
+.main-social ul
+  list-style: none
+  padding: 0
+  margin: 0
+  margin-bottom: 120px
+
+.main-social ul li
+  display: inline-table
+  width: 40px
+  height: 40px
+  border: solid 1px $Rockblue
+  text-align: center
+
+.main-social ul li a
+  text-decoration: none
+  width: 40px
+  height: 40px
+  margin: auto
+  text-align: center
+  display: block
+  color: $Rockblue
+
+.main-social ul li i
+  line-height: 40px
+  text-align: center
+
+.main-social ul li:hover
+  border: solid 1px $pink
+  cursor: pointer
+
+.main-social ul li:hover i
+  color: $lapis
+
+/************************************************
+
+/*** 4.0 - WORKS **
+
+.main-works
+  background-color: $Curiousblue
+  font-family: 'Montserrat', sans-serif
+  padding-top: 30px
+  padding-bottom: 30px
+
+.main-works-list h2
+  font-size: 1.2em
+  font-weight: 700
+  padding: 20px 0px 50px 0px
+
+.main-works-container
+  position: relative
+  overflow: scroll
+
+.main-works-container > div
+  padding-bottom: 30px
+
+.work-item img
+  width: 100%
+
+.work-item a
+  color: $pink
+  text-decoration: none
+
+.main-works-column
+  position: relative
+  width: 100%
+
+.main-works-column:hover .main-works-hover
+  opacity: 1
+  cursor: pointer
+
+.main-works-hover
+  position: absolute
+  width: 100%
+  height: 100%
+  opacity: 0
+
+.main-works-content
+  position: absolute
+  z-index: 201
+  top: 30px
+  width: 100%
+
+.main-works-content h2
+  position: relative
+  width: 100%
+  padding: 0
+  margin: 0
+  text-align: center
+  padding: 20px 30px 0px 30px
+  color: $Rockblue
+
+.main-works-content p
+  position: relative
+  width: 100%
+  padding: 0
+  margin: 0
+  font-family: 'Roboto', sans-serif
+  font-size: 20px
+  text-align: center
+  padding: 20px 30px 0px 30px
+  color: $Rockblue
+
+.main-works-overlay
+  position: absolute
+  width: 100%
+  height: 100%
+  background-color: $Zircon
+  top: 0
+  z-index: 200
+  opacity: 0.95
+
+.main-works-button
+  width: 100%
+  text-align: center
+
+.main-work-button
+  width: 100%
+  text-align: center
+
+.main-works-button button
+  text-align: center
+  margin-top: 15px
+  margin-bottom: 15px
+  border: solid 1px #ebebeb
+  background-color: transparent
+  padding: 10px 20px 10px 20px
+  font-size: 12px
+  color: $Rockblue
+  outline: none
+
+.main-works-button button:hover
+  color: #c75b9b
+  border: solid 1px #c75b9b
+  outline: none
+
+.main-work
+  background-color: $Zircon
+  font-family: 'Montserrat', sans-serif
+  padding-bottom: 30px
+
+.main-work-content
+  padding-top: 100px
+
+.main-work h2
+  font-size: 1.5em
+  color: $Rockblue
+  font-weight: 700
+  padding: 0
+  margin: 0
+
+.work-hello
+  font-size: 15px
+  color: $Rockblue
+  padding: 0
+  margin: 0
+
+.work-title
+  font-size: 14px
+  padding-top: 5px
+  color: $Rockblue
+
+.work-info
+  font-size: 15px
+  font-family: 'Roboto', sans-serif
+  color: $Rockblue
+  padding-top: 30px
+  padding-bottom: 50px
+
+.work-img
+  margin-top: 30px
+
+.work-img img
+  width: 100%
+
+.work-social
+  margin: auto
+  text-align: center
+  margin-top: 30px
+
+.work-social p
+  font-size: 12px
+  font-weight: 700
+  padding-bottom: 15px
+
+.work-social ul
+  list-style: none
+  padding: 0
+  margin: 0
+  margin-bottom: 30px
+
+.work-social ul li
+  display: inline-table
+  width: 40px
+  height: 40px
+  border: solid 1px #EBEBEB
+  text-align: center
+
+.work-social ul li a
+  text-decoration: none
+  width: 40px
+  height: 40px
+  margin: auto
+  text-align: center
+  display: block
+  color: #000
+
+.work-social ul li i
+  line-height: 40px
+  text-align: center
+
+.work-social ul li:hover
+  border: solid 1px #c75b9b
+  cursor: pointer
+
+.work-social ul li:hover i
+  color: #c75b9b
+
+/************************************************
+
+/*** 5.0 - BLOG **
+
+.main-blog
+  background-color: $Zircon
+  font-family: 'Montserrat', sans-serif
+  padding-bottom: 30px
+
+.main-blog-list
+  padding-top: 30px
+
+.main-blog-list div
+  padding-bottom: 30px
+
+.blog-item:hover .blog-item-img img
+  transform: scale(1.1)
+  cursor: pointer
+
+.blog-item-img
+  position: relative
+  display: block
+  overflow: scroll
+
+.blog-item-img img
+  width: 100%
+
+.blog-item a
+  text-decoration: none
+
+.blog-item-container
+  background-color: $lily
+  -webkit-box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.05)
+  -moz-box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.05)
+  box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.05)
+  text-align: center
+
+.blog-item-container h2
+  font-size: 1.3em
+  font-weight: 700
+  padding: 0
+  margin: 0
+  padding-left: 30px
+  padding-right: 30px
+  padding-top: 30px
+  padding-bottom: 7px
+  color: #fff
+  text-align: center
+  line-height: 1.3em
+
+.blog-item-container button
+  text-align: center
+  margin-top: 15px
+  margin-bottom: 15px
+  border: solid 1px $pink
+  background-color: transparent
+  padding: 5px 15px 5px 15px
+  font-size: 14px
+  color: $pink
+  outline: none
+
+.blog-item-container button:hover
+  color: #fff
+  text-decoration: rough
+  border: solid 1px #fff
+  outline: none
+
+.blog-item-container .blog-date
+  color: #fff
+  font-size: 0.8em
+  padding-left: 30px
+  padding-right: 30px
+  text-align: center
+
+.blog-author
+  color: $lapis
+  font-weight: 700
+
+.blog-category
+  font-size: 1.1rem
+  font-weight: bold
+  color: $pink
+  text-align: center
+
+.blog-post
+  font-family: 'Roboto', sans-serif
+  font-size: 1em
+  color: #fff
+  margin-top: 30px
+  padding-left: 30px
+  padding-right: 30px
+  text-align: center
+
+.main-blog-button
+  width: 100%
+  text-align: center
+
+.main-blog-button button
+  text-align: center
+  margin-top: 15px
+  margin-bottom: 15px
+  border: solid 1px $Rockblue
+  background-color: transparent
+  padding: 10px 20px 10px 20px
+  font-size: 12px
+  color: $Rockblue
+  outline: none
+
+.main-blog-button button:hover
+  color: $pink
+  text-decoration: rough
+  border: solid 1px $pink
+  outline: none
+
+.blog-detail
+  background-color: $Zircon
+  font-family: 'Montserrat', sans-serif
+  padding-bottom: 30px
+
+.blog-detail-content
+  padding-top: 50px
+
+.blog-detail-content h2
+  font-size: 40px
+  font-weight: 700
+  padding: 0
+  margin: 0
+
+.blog-detail-content h3
+  font-size: 1.5em
+  font-weight: 700
+  color: $malibu
+  padding: 0
+  margin: 0
+
+.blog-detail-author
+  color: $Zircon
+  font-weight: 700
+
+.blog-detail-date
+  color: $Rockblue
+  font-size: 12px
+
+.blog-detail-category
+  font-size: 12px
+  color: $pink
+
+/*Main typography style for all blogs,articles, and posts*/
+
+.blog-detail-info
+  font-size: 1.1em
+  font-family: 'Roboto', sans-serif
+  font-weight: 300
+  color: lighten($Rockblue, 5)
+  padding-top: 25px
+  line-height: 1.8em
+  letter-spacing: 0.3px
+
+.blog-detail-info a
+  color: $pink
+  text-decoration: none
+  padding: 0 2px 0 2px
+
+
+
+.blog-detail-img
+  padding-top: 30px
+  padding-bottom: 15px
+
+.blog-detail-img img
+  width: 100%
+
+/*.blog-detail-bold {
+ *    font-size: 1.2em;
+ *    font-weight: bold;
+ *    color: darken(#99d4d2, 5);
+ *}
+
+
+ *.blog-detail-big {
+ *    font-size: 1.2em;;
+ *    font-weight: bold;
+ *    color: #d499b9;
+ *}
+
+
+/*.blog-post {
+ *    font-family: 'Roboto', sans-serif;
+ *    font-size: 1.2em;
+ *    color: lighten($Rockblue,20);
+ *    margin-top: 30px;
+ *    padding-left: 30px;
+ *    padding-right: 30px;
+ *    text-align: center;
+ *    line-height: 1.6em;
+ *}
+
+.blog-social
+  margin: auto
+  margin-top: 30px
+
+.blog-social p
+  font-size: 0.9em
+  font-weight: 700
+  padding-bottom: 15px
+
+.blog-social ul
+  list-style: none
+  padding: 0
+  margin: 0
+  margin-bottom: 30px
+
+.blog-social ul li
+  display: inline-table
+  width: 40px
+  height: 40px
+  border: solid 1px $Rockblue
+  text-align: center
+
+.blog-social ul li a
+  text-decoration: none
+  width: 40px
+  height: 40px
+  margin: auto
+  text-align: center
+  display: block
+  color: $Rockblue
+
+.blog-social ul li i
+  line-height: 40px
+  text-align: center
+
+.blog-social ul li:hover
+  border: solid 1px $pink
+  cursor: pointer
+
+.blog-social ul li:hover i
+  color: $pink
+  text-decoration: rough
+
+/************************************************
+
+/*** 6.0 - ABOUT **
+
+.main-about
+  background-color: $Zircon
+  font-family: 'Montserrat', sans-serif
+  padding-bottom: 30px
+
+.main-about-content
+  padding-top: 50px
+
+.main-about h2
+  font-size: 40px
+  font-weight: 700
+  padding: 0
+  margin: 0
+
+.main-about h3
+  font-size: 25px
+  font-weight: 700
+  color: $malibu
+  padding: 0
+  margin: 0
+
+.about-hello
+  font-size: 15px
+  padding: 0
+  margin: 0
+
+.about-title
+  font-size: 16px
+  padding-top: 10px
+  color: $pink
+
+.about-info
+  font-size: 17px
+  font-family: 'Roboto', sans-serif
+  color: $Rockblue
+  padding-top: 30px
+  line-height: 1.7em
+
+/************************************************
+
+/*** 7.0 - CONTACT **
+
+.main-contact
+  background-color: $Zircon
+  font-family: 'Montserrat', sans-serif
+  padding-bottom: 30px
+
+.main-contact-container div
+  padding-top: 30px
+
+.main-contact input
+  width: 100%
+  padding: 15px 15px 15px 15px
+  border: solid 1px #EBEBEB
+  color: #C0C0C0
+  outline: none
+
+.main-contact textarea
+  width: 100%
+  height: 300px
+  padding: 15px 15px 15px 15px
+  border: solid 1px #EBEBEB
+  color: #C0C0C0
+  outline: none
+
+.main-contact button
+  text-align: center
+  border: solid 1px $Rockblue
+  background-color: transparent
+  padding: 10px 20px 10px 20px
+  font-size: 12px
+  color: $Rockblue
+  outline: none
+
+.main-contact button:hover
+  color: $pink
+  text-decoration: rough
+  border: solid 1px $pink
+  outline: none
+
+/************************************************
+
+/*** 8.0 - FOOTER **
+
+footer
+  padding-top: 50px
+  padding-bottom: 80px
+
+footer:after
+  display: block
+  clear: both
+
+.footer-content
+  float: none
+  margin: auto
+  text-align: center
+
+.footer-content p
+  font-family: 'Montserrat', sans-serif
+  font-weight: 400
+  color: $Rockblue
+
+.footer-social
+  float: right
+
+.footer-social ul
+  list-style: none
+  padding: 0
+  margin: 0
+
+.footer-social ul li
+  display: inline-table
+  width: 30px
+  height: 30px
+  border: solid 1px #EBEBEB
+  text-align: center
+
+.footer-social ul li a
+  text-decoration: none
+  width: 30px
+  height: 30px
+  margin: auto
+  text-align: center
+  display: block
+  color: $Rockblue
+
+.footer-social ul li i
+  line-height: 30px
+  text-align: center
+
+.footer-social ul li:hover
+  border: solid 1px #f2849e
+  cursor: pointer
+
+.footer-social ul li:hover i
+  color: #f2849e
+  text-decoration: rough
+
+/************************************************
+
+/*** 9.0 - LOAD **
+
+.main-load
+  position: absolute
+  width: 100%
+  height: 100%
+  background-color: #FFF
+  z-index: 999
+
+.main-load img
+  position: absolute
+  width: 64px
+  height: 64px
+  top: 50%
+  transform: translateY(-50%)
+  left: 50%
+  transform: translateX(-50%)
+
+/************************************************
+
+/*** 10.0 * RESPONSIVE **
+
+/** Screen 768px *
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px)
+  footer
+    padding-top: 50px
+    padding-bottom: 50px
+  .footer-social,
+  .footer-content
+    float: none
+    margin: auto
+    text-align: center
+  .header-menu-open ul li
+    text-align: center
+    opacity: 0
+    font-size: 40px
+    padding: 10px 0px 10px 0px
+    color: $Zircon
+    font-family: 'Montserrat', sans-serif
+    font-weight: 700
+  .header-menu-open ul li a:hover
+    font-size: 50px
+    text-decoration: rough
+    color: #f2849e
+    cursor: pointer
+  div.header-logo a
+    padding-left: 0px
+    
+
+/************************************************
+
+/*Additional Styles
+
+div.header-logo a
+  font-family: 'Montserrat', sans-serif
+  color: $Rockblue
+  font-size: 17px
+  font-weight: 500
+  text-decoration: none
+  letter-spacing: 0px
+
+div.header-logo a:hover
+  color: $pink
+  cursor: pointer
+
+a.main-works-button button
+  font-size: 0.9em
+  float: left
+  //color: $pink
+  //border-color: $pink
+
+  
+
+
