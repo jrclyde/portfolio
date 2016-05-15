@@ -1,0 +1,30 @@
+doctype html
+//if lt IE 7
+  html.no-js.lt-ie9.lt-ie8.lt-ie7  
+//if IE 7
+  html.no-js.lt-ie9.lt-ie8  
+//if IE 8
+  html.no-js.lt-ie9  
+// [if gt IE 8] <!
+html.no-js
+  // <![endif]
+  include includes/_head
+  body
+    // LOAD ANIMATE
+    //#main-load.main-load
+      img(src='assets/img/loading/load.gif', alt='')
+    // MAIN CONTAINER START
+    .main-container
+      // HEADER START
+      include includes/_header
+      // HEADER END
+      // MAIN CONTENT START
+      .main-content.container
+        h2 ABOUT
+        hr
+      // MAIN CONTENT END
+      // ABOUT CONTENT START
+      include includes/_main-about
+      // ABOUT CONTENT END
+      // FOOTER START
+      include includes/_footer
